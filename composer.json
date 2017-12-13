@@ -1,0 +1,22 @@
+{
+    "name": "macklus/yii2-freshdesk",
+    "description": "Simple Yii2 module to extend Freshdesk API",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","freshdesk","api"],
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "José Pedro Andrés",
+            "email": "macklus@debianitas.net"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.0",
+        "mpclarkson/freshdesk-php-sdk": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "macklus\\freshdesk\\": ""
+        }
+    }
+}

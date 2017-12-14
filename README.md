@@ -25,7 +25,26 @@ to the require section of your `composer.json` file.
 Usage
 -----
 
-Once the extension is installed, simply use it in your code by  :
+Once the extension is installed, simply declare a component in your config file:
 
 ```php
-<?= \macklus\freshdesk\AutoloadExample::widget(); ?>```
+'freshdesk' => [
+    'class' => 'macklus\freshdesk\Freshdesk',
+    'api_key' => 'ThisIsAFakeApiKey',
+    'domain' => 'macklus',
+],
+```
+
+After that, you can call Freshdesk API by using:
+
+```
+$response = Yii::$app->freshdesk->tickets->create([
+    'name' => 'Customer name',
+    'email' => 'Customer Email',
+    'cc_emails' => ['Customer Email'],
+    'subject' => "Your ticket",
+    'description' => 'The content of ticket',
+    'status' => 2,
+    'priority' => 1,
+]);
+```
